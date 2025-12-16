@@ -19,3 +19,32 @@ my_list_from_dict = list(my_dict.keys()) # [1, 2]
 ```
 
 * https://qiita.com/ishida330/items/9692836aa860b2d0c36c
+
+## what meaning this
+
+```
+def main():
+    # テストとエラーハンドリングを書く
+
+if __name__ == "__main__":
+    main()
+```
+* このファイルが**直接実行されたときだけ**main()を動かす仕組み
+### Pythonでは「ファイル＝モジュール」
+```example.py```があるとき、
+```
+import example
+```
+で呼び出された際に実行しないように
+```python example.py```で呼ばれた際はmain()を動かす
+
+## what is "__doc__"
+* pythonでは、関数・クラス・モジュールの最初の行が__doc__になる
+```
+def foo():
+    """This is foo function"""
+    pass
+
+print(foo.__doc__)
+# This is foo function
+```
